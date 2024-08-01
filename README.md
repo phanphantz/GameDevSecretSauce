@@ -6,7 +6,7 @@ You can learn more about each topic from the README.md file of each sub-director
 
 
 ## Table of Contents
-- [**Google Sheet Downloader**](./GoogleSheets)  - A Helper script for downloading a private Google sheet as a serializable data list using Google Sheet API v.4
+- [**Google Sheet Downloader**](./Google Sheet Downloader)  - A Helper script for downloading a private Google sheet as a serializable data list using Google Sheet API v.4
 
 ## Contact
 If you have any questions, you can reach me at phun.peeticharoenthum@gmail.com
