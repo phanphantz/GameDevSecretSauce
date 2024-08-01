@@ -41,11 +41,11 @@ If you don’t want to spend time writing code to authenticate and directly use 
 
 1. Import the sample code into your project and create a Scriptable Object of type SheetDownloader.
 2. Assign the JSON key file of the Service Account you created earlier in the keyJson field.
-3. Use the CreateRequest<T> function from SheetDownloader to download data from Google Sheets as the desired type, as shown in the example.
+3. Use the CreateRequest<T> function from SheetDownloader to download data from Google Sheets as the desired type, as shown in the Example.cs.
 
 ## Notes
 1. Remember that the Google Sheet you want to load must have been shared with the Service Account's email.
 2. The **spreadsheetId** for each Google Sheet can be obtained directly from the URL, located between **d/** and **/edit**.
 3. When building your game for iOS, Android, or other platforms, ensure that the **.dll** files of the Google Sheets API dependency packages are set to target that platform. Check for them inside the folder **Assets/Packages/…(package name)…./netstandard2.0/.**
-4. On iOS, if you encounter errors due to JSON deserialization issues, you can resolve this by setting the** Managed Stripping Level to Minimal in Player Settings > Other Settings > Optimizations.**
+4. On iOS, if you encounter errors due to JSON deserialization issues, you can resolve this by setting the **Managed Stripping Level to Minimal in Player Settings > Other Settings > Optimizations.**
 More details here: https://discussions.unity.com/t/serialization-works-well-in-editor-but-not-on-mobile/771203
