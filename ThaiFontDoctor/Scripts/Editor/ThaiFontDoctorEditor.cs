@@ -373,6 +373,7 @@ namespace PhEngine.Editor.ThaiTMP
             var cellSize = 25f;
             var cellPerRow = Mathf.FloorToInt(EditorGUIUtility.currentViewWidth / (cellSize * 2.5f));
             EditorGUILayout.BeginVertical();
+            var isSomeGlyphInvalid = false;
             for (int i = 0; i < characters.Length; i++)
             {
                 if (i == 0)
@@ -380,7 +381,10 @@ namespace PhEngine.Editor.ThaiTMP
                     EditorGUILayout.BeginHorizontal();
                     EditorGUILayout.LabelField("", GUILayout.Width(10));
                 }
-                DrawGlyphPreview(isAllowDeleting, ref characters, cellSize, characters[i]);
+
+                if (!DrawGlyphPreview(isAllowDeleting, ref characters, cellSize, characters[i]))
+                    isSomeGlyphInvalid = true;
+                
                 if ((i + 1) % cellPerRow == 0)
                 {
                     EditorGUILayout.EndHorizontal();
@@ -397,20 +401,24 @@ namespace PhEngine.Editor.ThaiTMP
                 }
             }
             EditorGUILayout.EndVertical();
+            if (isSomeGlyphInvalid)
+                EditorGUILayout.HelpBox("Some glyphs are missing from the font asset", MessageType.Error);
         }
 
-        void DrawGlyphPreview(bool isAllowDeleting, ref string characters, float cellSize, char character)
+        bool DrawGlyphPreview(bool isAllowDeleting, ref string characters, float cellSize, char character)
         {
+            var oldColor = GUI.color;
+            var isValid = true;
+            if (!ThaiFontDoctor.TryGetGlyphIndex(thaiFontDoctor.fontAsset, character, out _, out _))
+            {
+                GUI.color = Color.red;
+                isValid = false;
+            }
+            
             EditorGUILayout.BeginHorizontal(EditorStyles.helpBox, GUILayout.Width(cellSize));
-            if (!ThaiFontDoctor.TryGetGlyphIndex(thaiFontDoctor.fontAsset, character, out _, out var index))
-            {
-                EditorGUILayout.HelpBox("The Character '" + character + "' is not found on the font asset.", MessageType.Error);
-            }
-            else
-            {
-                var displayedString = ThaiGlyphHelper.GetDisplayedString(character.ToString());
-                EditorGUILayout.LabelField(" "+ displayedString, glyphPreviewStyle, GUILayout.Width(cellSize), GUILayout.Height(25f));
-            }
+            var displayedString = ThaiGlyphHelper.GetDisplayedString(character.ToString());
+            EditorGUILayout.LabelField(" "+ displayedString, glyphPreviewStyle, GUILayout.Width(cellSize), GUILayout.Height(25f));
+            GUI.color = oldColor;
             
             if (isAllowDeleting)
             {
@@ -422,6 +430,7 @@ namespace PhEngine.Editor.ThaiTMP
                 }
             }
             EditorGUILayout.EndHorizontal();
+            return isValid;
         }
         
         void ApplyChanges()
