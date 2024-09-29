@@ -8,8 +8,6 @@
 
 When you set a **Glyph Combination**, you specify which Thai character glyphs should pair together and the appropriate offset for each pair. ThaiFontDoctor then updates the **GlyphAdjustmentTable** in your **TMP_FontAsset** in real-time, making it easy to fine-tune how vowels and tone marks appear in your TMP_Text components. 
 
-What used to be a time-consuming, manual process is now streamlined and efficient!
-
 ## Key Features
 Take a look at **ThaiFontDoctor.asset** for an example. This instance of ThaiFontDoctor's ScriptableObject already has some common GlyphCombinations for solving Thai font issues on it:
 
@@ -37,7 +35,7 @@ Here are the available **GlyphPresets** and its glyph members :
 | LowerVowels | สระล่าง |- ุ, - ู | 
 
 ## Limitations
-- If multiple Glyph Combinations target the same glyphs, only the last adjustment will be applied. You can reorder combinations using the Up Arrow or Down Arrow buttons to prioritize adjustments.
+- If multiple Glyph Combinations target the same glyphs, only the last adjustment will be applied. You can reorder combinations by selecting one of them and use the Up Arrow or Down Arrow buttons to prioritize adjustments.
 - ThaiFontDoctor doesn't modify the displayed text based on Unicode replacements. Issues like YoYing ( ญ ) and ThoThan ( ฐ ) incorrectly rendering with lower vowels like Sara Uu ( ู ) remain unresolved for now.
 
 
