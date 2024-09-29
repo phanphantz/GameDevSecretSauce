@@ -33,9 +33,16 @@ namespace PhEngine.Editor.ThaiTMP
 
         public override void OnInspectorGUI()
         {
+            
             SetupStyles();
             var combinationList = thaiFontDoctor.glyphCombinationList;
             DrawFontAssetSection(combinationList);
+            if (thaiFontDoctor.fontAsset == null)
+            {
+                EditorGUILayout.HelpBox("Please assign a font asset file", MessageType.Info);
+                return;
+            }
+            
             DrawTesterSection();
             EditorGUILayout.Space();
             DrawCombinationAdder(combinationList);
@@ -78,9 +85,11 @@ namespace PhEngine.Editor.ThaiTMP
             EditorGUILayout.EndHorizontal();
             EditorGUI.indentLevel++;
             var variantCount = combinationList.Sum(i => i.VariantCount);
-            EditorGUILayout.LabelField("Combination Variant Count : " + variantCount);
             if (fontAsset)
+            {
+                EditorGUILayout.LabelField("Combination Variant Count : " + variantCount);
                 EditorGUILayout.LabelField("Actual Pair Adjustment Count : " + fontAsset.fontFeatureTable.glyphPairAdjustmentRecords.Count);
+            }
             EditorGUI.indentLevel--;
         }
 
