@@ -13,7 +13,7 @@ What used to be a time-consuming, manual process is now streamlined and efficien
 ## Key Features
 Take a look at **ThaiFontDoctor.asset** for an example. This instance of ThaiFontDoctor's ScriptableObject already has some common GlyphCombinations for solving Thai font issues on it:
 
-<img src="../Assets/ThaiFontDoctor/ThaiFontDoctor_Example.png" width="500">
+<img src="../Assets/ThaiFontDoctor/ThaiFontDoctor_Example.png" width="1000">
 
 - Use the **Add** button to create new Glyph Combinations or click on existing ones to edit them.
 - On each GlyphCombination, you can specify the characters and adjustment offset of the **Leading Glyphs** and **Following Glyphs**. 
