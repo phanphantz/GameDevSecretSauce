@@ -1,5 +1,5 @@
 # Thai Font Doctor
-Thai Font Doctor is a lightweight Unity Editor tool designed to fix Thai font issues—like misaligned vowels and tone marks—within minutes! By automating glyph pair adjustments in TextMeshPro's Font Asset, it turns a previously tedious task into a quick, hassle-free experience. 
+**Thai Font Doctor** is a lightweight Unity Editor tool designed to fix Thai font issues—like misaligned vowels and tone marks—within minutes! By automating glyph pair adjustments in TextMeshPro's Font Asset, it turns a previously tedious task into a quick, hassle-free experience. 
 
 *Tested with TextMeshPro package version 3.0.9*
 
