@@ -11,7 +11,7 @@ When you set a **Glyph Combination**, you specify which Thai character glyphs sh
 What used to be a time-consuming, manual process is now streamlined and efficient!
 
 ## Key Features
-Take a look at **ThaiFontDoctor.asset** for an example:
+Take a look at **ThaiFontDoctor.asset** for an example. This instance of ThaiFontDoctor's ScriptableObject already has some common GlyphCombinations for solving Thai font issues on it:
 
 <img src="../Assets/ThaiFontDoctor/ThaiFontDoctor_Example.png" width="500">
 
