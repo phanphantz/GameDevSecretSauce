@@ -1,3 +1,25 @@
+# Important Note!
+## 🎉**Thai Font Doctor** is now a part of [**Thai Text Care for Unity**](https://github.com/phanphantz/ThaiTextCare-for-Unity)🎉
+This library provides enhanced Thai language support for Unity's TextMeshPro such as Thai Word Segmentation and Thai Font Glyphs fixer for overlapped vowels/tone marks, significantly improving your experience when working with Thai language in Unity.
+
+### Consider using this package instead to receive up-to-date features and supports.
+
+<br>
+<p align="center">
+<img src="https://github.com/phanphantz/GameDevSecretSauce/blob/main/Assets/ThaiFontDoctor/ThaiTextCare_GIF.gif" width="65%">  
+</p>
+<p align="center">
+<i>Thai Word Segmentation</i>
+</p>
+<br>
+<p align="center">
+<img src="https://github.com/phanphantz/GameDevSecretSauce/blob/main/Assets/ThaiFontDoctor/ThaiFontDoctor_GIF.gif" width="65%">
+</p>
+<p align="center">
+<i>Thai Glyph Adjustment Automation</i>
+</p>
+<br>
+
 # Thai Font Doctor
 **Thai Font Doctor** is a lightweight Unity Editor tool designed to fix Thai font issues—like misaligned vowels and tone marks—within minutes! By automating glyph pair adjustments in TextMeshPro's Font Asset, it turns a previously tedious task into a quick, hassle-free experience. 
 
@@ -36,7 +58,7 @@ Here are the available **GlyphPresets** and its glyph members :
 
 ## Limitations
 - If multiple Glyph Combinations target the same glyphs, only the last adjustment will be applied. You can reorder combinations by selecting one of them and use the Up Arrow or Down Arrow buttons to prioritize adjustments.
-- ThaiFontDoctor doesn't modify the displayed text based on Unicode replacements. Issues like YoYing ( ญ ) and ThoThan ( ฐ ) incorrectly rendering with lower vowels like Sara Uu ( ู ) remain unresolved for now.
+- ThaiFontDoctor doesn't modify the displayed text based on Unicode replacements. Issues like YoYing ( ญ ) and ThoThan ( ฐ ) incorrectly rendering with lower vowels like Sara Uu ( ู ) remains. Use [**Thai Text Care for Unity**](https://github.com/phanphantz/ThaiTextCare-for-Unity)'s **ThaiTextNurse** component instead.
 - Multi-edit feature is not supported.
 
 
