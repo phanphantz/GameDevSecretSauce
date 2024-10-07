@@ -58,7 +58,7 @@ Here are the available **GlyphPresets** and its glyph members :
 
 ## Limitations
 - If multiple Glyph Combinations target the same glyphs, only the last adjustment will be applied. You can reorder combinations by selecting one of them and use the Up Arrow or Down Arrow buttons to prioritize adjustments.
-- ThaiFontDoctor doesn't modify the displayed text based on Unicode replacements. Issues like YoYing ( ญ ) and ThoThan ( ฐ ) incorrectly rendering with lower vowels like Sara Uu ( ู ) remains. Use [**Thai Text Care for Unity**](https://github.com/phanphantz/ThaiTextCare-for-Unity)'s **ThaiTextNurse** component instead.
+- ThaiFontDoctor doesn't modify the displayed text based on Unicode replacements. Issues like YoYing ( ญ ) and ThoThan ( ฐ ) incorrectly rendering with lower vowels like Sara Uu ( ู ) remains. Use [**Thai Text Care for Unity**](https://github.com/phanphantz/ThaiTextCare-for-Unity)'s **ThaiTextNurse** component to fix this issue.
 - Multi-edit feature is not supported.
 
 
