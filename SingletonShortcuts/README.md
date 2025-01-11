@@ -70,14 +70,6 @@ public class SampleSO : ScriptableObject
     [Header("UI Settings")]
     [SerializeField] Color uiColor = Color.white;
     [SerializeField] int fontSize = 14;
-
-#if UNITY_EDITOR
-    [UnityEditor.MenuItem("CustomMenu/SampleSO23")]
-    static void ShowWindow()
-    {
-        PropertyWindowHelper.OpenScriptableObjectWindow<SampleSO>();
-    }
-#endif
 }
 ```
 
